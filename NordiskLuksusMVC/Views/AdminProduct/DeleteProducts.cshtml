@@ -1,0 +1,20 @@
+@model Product
+
+<section>
+
+    <header>
+        <h3>Slette produkt</h3>
+    </header>
+
+    <h1 class="delete-warning">Er du sikker på at du vil slette @Html.DisplayFor(product => product.ProductName)?</h1>
+    <section>
+            <h4>ID: @Html.DisplayFor(product => product.ID)</h4>
+            <h4>Navn: @Html.DisplayFor(product => product.ProductName)</h4>
+            <form asp-action="DeleteProducts">
+                <input asp-for="ID" type="hidden">
+                <input type="submit" value="Slett produkt">
+            </form>
+    </section>
+
+
+</section>

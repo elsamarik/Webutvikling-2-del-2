@@ -1,0 +1,31 @@
+@model CustomerOrder
+
+
+<section>
+
+    <section class="add-form">
+        <h3>Rediger kundebestilling; </h3>
+        <form asp-action="EditCustomerOrders">
+            <label>Produkt navn: 
+            <select class="input-box" id="product-picker" asp-for="ProductID">
+            <option label="Ost">1</option>
+            <option label="Kaviar">2</option>
+            <option label="Blåskjell">3</option>
+            <option label="Cheddar">4</option>
+            </select>
+            </label>
+            <br>
+        <label>Navn: 
+                <input class="input-box" asp-for="AuthorName" type="text">
+            </label>
+            <br>
+            <label>Tittel
+                <input class="input-box" asp-for="Title" type="text">
+            </label>
+            <br>
+            <label>Kundebestilling tekst: 
+                <textarea class="input-box" asp-for="CustomerOrderText" rows="8" cols="40"></textarea>
+            </label>
+            <input type="submit" value="Lagre kundebestilling">
+        </form>
+    </section>

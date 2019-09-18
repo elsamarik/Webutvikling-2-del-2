@@ -1,0 +1,26 @@
+
+<section>
+    <h1 id="admin-navbar">Admin navbar</h1>
+    <nav id="navbar">
+                <a asp-controller="AdminProduct" asp-action="AdminPage">Alle produktene</a>       
+                <a asp-controller="AdminProduct" asp-action="AllCustomerOrders">Alle kundebestillingene</a>
+                <a asp-controller="AdminProduct" asp-action="AddProducts">Legg til produkt</a>
+                
+        </nav>
+    <section>
+    @{
+        foreach (CustomerOrder customerOrder in Model)
+        {
+            <article class="customerOrder-article">
+                   <h2>@customerOrder.Title</h2>
+                   <h4>@customerOrder.AuthorName bestiller:</h4>
+                   <p>@customerOrder.CustomerOrderText</p>
+                   <hr>
+                   <p>Tilhører produkt: @customerOrder.ProductID</p>
+                   <a class="admin-buttons" asp-controller="AdminProduct" asp-action="EditCustomerOrders" asp-route-id="@customerOrder.ID">Endre kundebestilling</a>
+                   <a class="admin-buttons" asp-controller="AdminProduct" asp-action="DeleteCustomerOrders" asp-route-id="@customerOrder.ID">Slett kundebestilling</a>
+            </article>
+        }
+    }
+</section>
+</section>

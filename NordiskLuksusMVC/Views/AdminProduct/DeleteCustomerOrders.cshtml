@@ -1,0 +1,21 @@
+@model CustomerOrder
+
+<section>
+
+    <header>
+        <h3>Delete customerOrder</h3>
+    </header>
+
+    <h1 class="delete-warning">Are you sure you want to delete this customerOrder?</h1>
+    <section>
+            <h4>ID: @Html.DisplayFor(customerOrder => customerOrder.Title)</h4>
+            <h4>Name: @Html.DisplayFor(customerOrder => customerOrder.AuthorName)</h4>
+            <h4>CustomerOrder text: @Html.DisplayFor(customerOrder => customerOrder.CustomerOrderText)</h4>
+            <form asp-action="DeleteCustomerOrders">
+                <input asp-for="ID" type="hidden">
+                <input type="submit" value="Delete customerOrder">
+            </form>
+    </section>
+
+
+</section>

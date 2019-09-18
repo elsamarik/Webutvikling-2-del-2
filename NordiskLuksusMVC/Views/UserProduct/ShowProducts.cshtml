@@ -1,0 +1,27 @@
+
+    <section>
+        <header>
+            <h2>Alle produktene hos Nordisk Luksus</h2>
+        </header>
+
+        <section>
+            @{
+                foreach (Product product in Model)
+                {
+                    <article class="product-article">
+                   
+                   <h3>@product.ProductName</h3>
+                   <a class="admin-buttons" asp-controller="UserProduct" 
+                   asp-action="ShowCustomerOrders"
+                   asp-route-id="@product.ID"></a>
+
+                   </article>
+
+                }
+            }
+        </section>
+
+
+
+
+    </section>

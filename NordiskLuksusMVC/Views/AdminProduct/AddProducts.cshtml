@@ -1,0 +1,15 @@
+@model Product
+
+
+<section>
+
+    <section class="add-form">
+        <h3>Legg til produkt</h3>
+        <form asp-action="AddProducts">
+        <label>Produkt navn
+                <input class="input-box" asp-for="ProductName" type="text">
+            </label>
+            
+            <input type="submit" value="Legg til produkt">
+        </form>
+    </section>

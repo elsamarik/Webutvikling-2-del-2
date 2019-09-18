@@ -1,0 +1,19 @@
+@model Product
+
+<section>
+
+    <section class="add-form">
+        <form asp-action="EditProducts">
+            <h3>Endre produkt</h3>
+            <input asp-for="ID" type="hidden">
+            <label>Navn
+                <input class="input-box" asp-for="ProductName" type="text">
+            </label>
+            <input type="submit" value="Endre produkt">
+
+        </form>
+
+    </section>
+
+
+</section

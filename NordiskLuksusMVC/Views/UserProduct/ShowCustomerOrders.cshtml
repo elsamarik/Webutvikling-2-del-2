@@ -1,0 +1,21 @@
+@model Product
+<section>
+    <header>
+        <h3>Kundebestilling for</h3>
+        <h1 id="product-title">@Model.ProductName</h1>
+    </header>
+
+    
+        <section>
+            @foreach (CustomerOrder customerOrder in Model.CustomerOrder)
+            {
+                <article class="customerOrder-article">
+                   <h2>@customerOrder.Title</h2>
+                   <h4>@customerOrder.AuthorName bestiller:</h4>
+                   <p>@customerOrder.CustomerOrderText</p>
+                </article>
+                }
+
+        </section>
+    </section>
+</section>
